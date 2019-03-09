@@ -11,13 +11,13 @@ mv models-dcfe009a024854207c9067d785c105f5ebf5a01b models
 rm dcfe009a024854207c9067d785c105f5ebf5a01b.zip 
 
 #安装依赖项
-pip install Cython
-pip install pillow
-pip install lxml
-pip install jupyter
-pip install matplotlib
-pip install opencv-python
-pip install pycocotools
+pip install Cython -i http://mirrors.aliyun.com/pypi/simple/
+pip install pillow -i http://mirrors.aliyun.com/pypi/simple/
+pip install lxml -i http://mirrors.aliyun.com/pypi/simple/
+pip install jupyter -i http://mirrors.aliyun.com/pypi/simple/
+pip install matplotlib -i http://mirrors.aliyun.com/pypi/simple/
+pip install opencv-python -i http://mirrors.aliyun.com/pypi/simple/
+pip install pycocotools -i http://mirrors.aliyun.com/pypi/simple/
 
 #安装object detection api 并验证
 cd /output/models/research/
@@ -73,8 +73,8 @@ python /output/models/research/object_detection/export_inference_graph.py \
 #使用inference.ipynb来推理
 
 #利用Flask来发布模型
-pip install flask
-pip install flask_wtf
+pip install flask -i http://mirrors.aliyun.com/pypi/simple/
+pip install flask_wtf -i http://mirrors.aliyun.com/pypi/simple/
 #启动服务
 python /output/tensorflow_object_detection_api_demo/web/app.py
 #用浏览器打开 http://xxxx:8000
